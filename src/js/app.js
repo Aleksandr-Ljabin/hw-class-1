@@ -1,8 +1,11 @@
 class Character {
-  constructor(name, health, level) {
+  constructor(name, type, attack, defence) {
     this.name = name;
+    this.type = type;
     this.health = 100;
     this.level = 1;
+    this.attack = attack;
+    this.defence = defence;
   };
 
   set name(name) {
@@ -19,7 +22,7 @@ class Character {
 }
 
 class Bowerman extends Character {
-  constructor(name, type, health, level, attack, defence) {
+  constructor(name, health, level) {
     super(name, health, level);
     this.type = "Bowerman";
     this.attack = 25;
@@ -29,7 +32,7 @@ class Bowerman extends Character {
 
 
 class Swordsman extends Character {
-  constructor(name, type, health, level, attack, defence) {
+  constructor(name, health, level) {
     super(name, health, level);
     this.type = "Swordsman";
     this.attack = 40;
@@ -38,7 +41,7 @@ class Swordsman extends Character {
 };
 
 class Magician extends Character {
-  constructor(name, type, health, level, attack, defence) {
+  constructor(name, health, level) {
     super(name, health, level);
     this.type = "Magician";
     this.attack = 10;
@@ -47,7 +50,7 @@ class Magician extends Character {
 };
 
 class Daemon extends Character {
-  constructor(name, type, health, level, attack, defence) {
+  constructor(name, health, level) {
     super(name, health, level);
     this.type = "Daemon";
     this.attack = 10;
@@ -56,7 +59,7 @@ class Daemon extends Character {
 };
 
 class Undead extends Character {
-  constructor(name, type, health, level, attack, defence) {
+  constructor(name, health, level) {
     super(name, health, level);
     this.type = "Undead";
     this.attack = 25;
@@ -65,7 +68,7 @@ class Undead extends Character {
 };
 
 class Zombie extends Character {
-  constructor(name, type, health, level, attack, defence) {
+  constructor(name, health, level) {
     super(name, health, level);
     this.type = "Zombie";
     this.attack = 40;
